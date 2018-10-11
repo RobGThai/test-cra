@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: 4ad7081c76a2eae72cfec64b0a57a43bbf2bca5525e14d1a36a673eb980a88f1
     docker:
       # specify the version you desire here
       - image: circleci/node:10.11
@@ -32,4 +34,13 @@ jobs:
       # run tests!
       - run: yarn test
 
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+
+      - run:
+          name: Update Code Climate
+          command: |
+          ./cc-test-reporter before-build
+          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
