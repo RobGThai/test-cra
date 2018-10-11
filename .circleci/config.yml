@@ -41,6 +41,6 @@ jobs:
       - run:
           name: Update Code Climate
           command: |
-          ./cc-test-reporter before-build
-          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+            ./cc-test-reporter before-build
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
