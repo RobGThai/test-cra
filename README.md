@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/63a7cdc205f3c21b076e/maintainability)](https://codeclimate.com/github/RobGThai/test-cra/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/63a7cdc205f3c21b076e/test_coverage)](https://codeclimate.com/github/RobGThai/test-cra/test_coverage)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
