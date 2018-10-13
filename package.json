@@ -11,8 +11,8 @@
     "react-dom": "^16.5.2"
   },
   "jest-junit": {
-    "outputDirectory": "test-result",
-    "outputName": "results.xml"
+    "outputDirectory": "test-results",
+    "outputName": "jest/results.xml"
   },
   "scripts": {
     "start": "react-scripts start",

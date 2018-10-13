@@ -52,7 +52,11 @@ jobs:
             CI: true
 
       - store_test_results:
+          path: test-result
+          
+      - store_test_results:
           path: reports/junit
+          
       - store_artifacts:
           path: reports/junit
 
