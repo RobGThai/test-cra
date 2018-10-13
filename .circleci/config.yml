@@ -44,14 +44,22 @@ jobs:
             ./cc-test-reporter before-build
 
       # run tests!
-      - run: yarn test
+      - run:
+          name: Run tests
+          command: yarn test:ci
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+            CI: true
 
+      - store_test_results:
+          path: reports/junit
       - store_artifacts:
-          path: coverage
-          prefix: coverage
+          path: reports/junit
 
       - run:
           name: Upload test coverage to CodeClimate
           command: |
             ./cc-test-reporter after-build --exit-code $?
+
+          
 
